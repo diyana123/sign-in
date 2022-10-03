@@ -9,6 +9,25 @@
 
     .buttons-container {
       display:flex;
-      justify-content: space-between;
+     justify-content:space-around;
+     flex-direction: column;
+     padding: 20px;
+    
+    }
+
+    .button-submit{
+      margin-right: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .button-google{
+      display: inline-block;
+      text-align: center;
+      display: flex;
+      
+      
+      //position: absolute;
+    
+  
     }
   }

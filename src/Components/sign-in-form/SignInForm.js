@@ -49,6 +49,7 @@ const SignInForm = () => {
           console.log(error);
       }
       console.log("user sign in failed", error);
+      resetFormFields();
     }
   };
 
@@ -81,12 +82,20 @@ const SignInForm = () => {
           value={password}
         />
         <div className="buttons-container">
-          <Button type="submit" onClick={signInAuthUserWithEmailAndPassword}>
-            Sign In
-          </Button>
-          <Button buttonType="google" type="button" onClick={signInWithGoogle}>
-            Sign In With Google
-          </Button>
+          <div className="button-submit">
+            <Button type="submit" onClick={signInAuthUserWithEmailAndPassword}>
+              Sign In
+            </Button>
+          </div>
+          <div className="button-google">
+            <Button
+              buttonType="google"
+              type="button"
+              onClick={signInWithGoogle}
+            >
+              Sign In With Google
+            </Button>
+          </div>
         </div>
       </form>
     </div>

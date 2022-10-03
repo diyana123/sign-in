@@ -5,6 +5,8 @@ import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/Firebase";
+import Button from "../Button/Button";
+//import { UserContext } from "../contexts/User";
 
 const defaultFormFields = {
   displayName: "",
@@ -16,6 +18,10 @@ const defaultFormFields = {
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
+
+  //const val = UserContext(UserContext);
+  // const val = useContext(UserContext);
+  // console.log("hit");
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -92,7 +98,7 @@ const SignUpForm = () => {
           value={confirmPassword}
         />
         <div className="buttons-container">
-          <button type="submit">Submit</button>
+          <Button type="submit">Submit</Button>
         </div>
       </form>
     </div>
